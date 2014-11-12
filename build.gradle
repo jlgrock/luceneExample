@@ -1,0 +1,22 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile (
+            [group: 'org.apache.lucene', name: 'lucene-core', version:'4.10.1'],
+            [group: 'org.apache.lucene', name: 'lucene-memory', version:'4.10.1'],
+            [group: 'org.apache.lucene', name: 'lucene-analyzers-common', version:'4.10.1'],
+            [group: 'org.apache.lucene', name: 'lucene-queries', version:'4.10.1'],
+            [group: 'org.apache.lucene', name: 'lucene-queryparser', version:'4.10.1'],
+            [group: 'org.apache.lucene', name: 'lucene-facet', version:'4.10.1'],
+            [group: 'org.joda', name: 'joda-money', version: '0.9.1'],
+
+    )
+}
